@@ -1,9 +1,0 @@
-h1 {
-  color: red;
-}
-
-.input-field {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
