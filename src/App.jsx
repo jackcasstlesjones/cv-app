@@ -4,6 +4,7 @@ import viteLogo from "/vite.svg";
 import "./App.css";
 import Inputs from "./components/input/input";
 import DisplayCV from "./components/cv-display/cv-display";
+import Sidebar from "./components/sidebar/sidebar";
 
 function App() {
   const [headCont, setheadCont] = useState("placeholder");
@@ -20,31 +21,7 @@ function App() {
   return (
     <>
       <div className="big-container">
-        <div className="input-column">
-          <Inputs
-            title={"Personal Details"}
-            changeFunction={handleInputChange}
-            setHeadCont={handleHeaderChange}
-            inputValue={inputValue}
-          />
-          <Inputs
-            title={"Education"}
-            changeFunction={handleInputChange}
-            setHeadCont={handleHeaderChange}
-            inputValue={inputValue}
-          />
-          <Inputs
-            title={"Work Experience"}
-            changeFunction={handleInputChange}
-            setHeadCont={handleHeaderChange}
-            inputValue={inputValue}
-          />
-          <Inputs
-            changeFunction={handleInputChange}
-            setHeadCont={handleHeaderChange}
-            inputValue={inputValue}
-          />
-        </div>
+        <Sidebar />
         <DisplayCV headerContent={headCont} />
       </div>
     </>
