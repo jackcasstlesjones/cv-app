@@ -22,16 +22,19 @@ function App() {
       <div className="big-container">
         <div className="input-column">
           <Inputs
+            title={"Personal Details"}
             changeFunction={handleInputChange}
             setHeadCont={handleHeaderChange}
             inputValue={inputValue}
           />
           <Inputs
+            title={"Education"}
             changeFunction={handleInputChange}
             setHeadCont={handleHeaderChange}
             inputValue={inputValue}
           />
           <Inputs
+            title={"Work Experience"}
             changeFunction={handleInputChange}
             setHeadCont={handleHeaderChange}
             inputValue={inputValue}

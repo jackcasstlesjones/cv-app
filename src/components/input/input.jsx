@@ -1,7 +1,12 @@
 import DisplayCV from "../cv-display/cv-display";
 import "./input.css";
 
-export default function Inputs({ setHeadCont, changeFunction, inputValue }) {
+export default function Inputs({
+  title,
+  setHeadCont,
+  changeFunction,
+  inputValue,
+}) {
   const handleClick = (e) => {
     e.preventDefault();
     setHeadCont(inputValue);
@@ -9,7 +14,7 @@ export default function Inputs({ setHeadCont, changeFunction, inputValue }) {
 
   return (
     <div className="input-container">
-      <h2>Personal Details</h2>
+      <h2>{title}</h2>
       <form autoComplete="off" action="" className="form">
         <div className="form-pair">
           <label htmlFor="cv-name">Full Name</label>
