@@ -7,6 +7,11 @@ import DisplayCV from "./components/cv-display/cv-display";
 
 function App() {
   const [headCont, setheadCont] = useState("placeholder");
+  const [inputValue, setInputValue] = useState("");
+
+  const handleInputChange = (event) => {
+    setInputValue(event.target.value);
+  };
 
   const handleHeaderChange = (newHeader) => {
     setheadCont(newHeader);
@@ -14,16 +19,12 @@ function App() {
 
   return (
     <>
-      <head>
-        <meta charset="UTF-8"></meta>
-        <meta
-          name="viewport"
-          content="width=device-width, initial-scale=1.0"
-        ></meta>
-        <title>Your React App</title>
-      </head>
       <div className="big-container">
-        <Inputs setHeadCont={handleHeaderChange} />
+        <Inputs
+          changeFunction={handleInputChange}
+          setHeadCont={handleHeaderChange}
+          inputValue={inputValue}
+        />
         <DisplayCV headerContent={headCont} />
       </div>
     </>
