@@ -20,11 +20,28 @@ function App() {
   return (
     <>
       <div className="big-container">
-        <Inputs
-          changeFunction={handleInputChange}
-          setHeadCont={handleHeaderChange}
-          inputValue={inputValue}
-        />
+        <div className="input-column">
+          <Inputs
+            changeFunction={handleInputChange}
+            setHeadCont={handleHeaderChange}
+            inputValue={inputValue}
+          />
+          <Inputs
+            changeFunction={handleInputChange}
+            setHeadCont={handleHeaderChange}
+            inputValue={inputValue}
+          />
+          <Inputs
+            changeFunction={handleInputChange}
+            setHeadCont={handleHeaderChange}
+            inputValue={inputValue}
+          />
+          <Inputs
+            changeFunction={handleInputChange}
+            setHeadCont={handleHeaderChange}
+            inputValue={inputValue}
+          />
+        </div>
         <DisplayCV headerContent={headCont} />
       </div>
     </>
