@@ -1,5 +1,5 @@
 .cv-container {
-  height: 700px;
+  height: 900px;
   width: 50%;
   display: flex;
   margin: 0 auto;
@@ -7,11 +7,12 @@
 }
 
 .cv-header {
-  background-color: red;
-  height: 100%;
+  background-color: #005264;
+  height: 25%;
+  color: white;
 }
 .cv-body {
-  background-color: blue;
+  background-color: white;
   height: 100%;
 }
 .cv-footer {
