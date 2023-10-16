@@ -1,5 +1,4 @@
 import "./cv-display.css";
-import { useState } from "react";
 
 export default function DisplayCV({ headerContent }) {
   return (

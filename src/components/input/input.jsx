@@ -1,7 +1,16 @@
 import Buttons from "../input-buttons/buttons";
 import "./input.css";
+import { useState } from "react";
 
-export default function Inputs({ title, firstField, secondField, thirdField }) {
+export default function Inputs({
+  title,
+  firstField,
+  secondField,
+  thirdField,
+  setHeaderContent,
+}) {
+  const [inputValue, setInputValue] = useState("");
+
   return (
     <div className="input-container">
       <h2>{title}</h2>
@@ -13,6 +22,7 @@ export default function Inputs({ title, firstField, secondField, thirdField }) {
             type="text"
             name={firstField}
             id={firstField}
+            onChange={(e) => setInputValue(e.target.value)}
           />
         </div>
 
@@ -36,7 +46,7 @@ export default function Inputs({ title, firstField, secondField, thirdField }) {
           />
         </div>
       </form>
-      <Buttons />
+      <Buttons inputValue={inputValue} setHeaderContent={setHeaderContent} />
     </div>
   );
 }

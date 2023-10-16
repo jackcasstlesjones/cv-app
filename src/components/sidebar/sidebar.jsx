@@ -1,7 +1,7 @@
 import Inputs from "../input/input";
 import "./sidebar.css";
 
-export default function Sidebar() {
+export default function Sidebar({ setHeaderContent }) {
   class Details {
     constructor(title, firstField, secondField, thirdField) {
       this.title = title;
@@ -34,11 +34,14 @@ export default function Sidebar() {
   return (
     <>
       <div className="sidebar">
-        <Inputs {...personalDetailsInput} />
+        <Inputs {...personalDetailsInput} setHeaderContent={setHeaderContent} />
 
-        <Inputs {...educationDetailsInput} />
+        <Inputs
+          {...educationDetailsInput}
+          setHeaderContent={setHeaderContent}
+        />
 
-        <Inputs {...workDetailsInput} />
+        <Inputs {...workDetailsInput} setHeaderContent={setHeaderContent} />
       </div>
     </>
   );
