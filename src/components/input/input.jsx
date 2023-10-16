@@ -7,6 +7,7 @@ export default function Inputs({
   firstField,
   secondField,
   thirdField,
+  svg,
   handlePersonalChange,
   personalDetailsData,
 }) {
@@ -16,7 +17,10 @@ export default function Inputs({
 
   return (
     <div className="input-container">
-      <h2>{title}</h2>
+      <div className="title-svg-div">
+        <svg className="title-svg">{svg}</svg>
+        <h2>{title}</h2>
+      </div>
       <form autoComplete="off" action="" className="form">
         <div className="form-pair">
           <label htmlFor={firstField}>{firstField}</label>
