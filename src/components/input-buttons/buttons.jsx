@@ -1,7 +1,7 @@
-export default function Buttons({ inputValue, setHeaderContent }) {
+export default function Buttons({ nameValue, setHeaderContent }) {
   function onButtonClick() {
-    console.log(inputValue);
-    setHeaderContent(inputValue);
+    console.log(nameValue);
+    setHeaderContent(nameValue);
   }
   return (
     <div className="button-container">

@@ -9,7 +9,7 @@ export default function Inputs({
   thirdField,
   setHeaderContent,
 }) {
-  const [inputValue, setInputValue] = useState("");
+  const [nameValue, setNameValue] = useState("");
 
   return (
     <div className="input-container">
@@ -22,7 +22,10 @@ export default function Inputs({
             type="text"
             name={firstField}
             id={firstField}
-            onChange={(e) => setInputValue(e.target.value)}
+            onChange={(e) => {
+              setNameValue(e.target.value);
+              console.log(nameValue);
+            }}
           />
         </div>
 
@@ -46,7 +49,7 @@ export default function Inputs({
           />
         </div>
       </form>
-      <Buttons inputValue={inputValue} setHeaderContent={setHeaderContent} />
+      <Buttons nameValue={nameValue} setHeaderContent={setHeaderContent} />
     </div>
   );
 }

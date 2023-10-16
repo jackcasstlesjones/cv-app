@@ -10,6 +10,16 @@
   background-color: #005264;
   height: 25%;
   color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.email-phone-container {
+  display: flex;
+  gap: 30px;
+  margin: auto;
 }
 .cv-body {
   background-color: white;
