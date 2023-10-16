@@ -6,23 +6,23 @@ import DisplayCV from "./components/cv-display/cv-display";
 import Sidebar from "./components/sidebar/sidebar";
 
 function App() {
-  const [nameValue, setNameValue] = useState("Jack CJ");
-  const [emailvalue, setEmailValue] = useState("jackcasstles@gmail.com");
-  const [phoneValue, setPhoneValue] = useState("0493673312");
+  const [personalDetailsData, setPersonalDetailsData] = useState({
+    fullName: "Jack",
+    email: "email@",
+    phone: "047",
+  });
 
-  const setNameContent = (newName) => {
-    setNameValue(newName);
-  };
-
-  const setEmailContent = (newEmail) => {
-    setEmailValue(newEmail);
+  const handlePersonalChange = (fieldName, value) => {
+    setPersonalDetailsData(() => ({
+      [fieldName]: value,
+    }));
   };
 
   return (
     <>
       <div className="big-container">
-        <Sidebar setNameContent={setNameContent} />
-        <DisplayCV nameContent={nameValue} />
+        <Sidebar setNameContent={handlePersonalChange} />
+        <DisplayCV personalDetailsContent={personalDetailsData} />
       </div>
     </>
   );
