@@ -12,16 +12,18 @@ function App() {
     phone: "047",
   });
 
-  const handlePersonalChange = (fieldName, value) => {
+  const handlePersonalChange = (userName, userEmail, userPhone) => {
     setPersonalDetailsData(() => ({
-      [fieldName]: value,
+      fullName: userName,
+      email: userEmail,
+      phone: userPhone,
     }));
   };
 
   return (
     <>
       <div className="big-container">
-        <Sidebar setNameContent={handlePersonalChange} />
+        <Sidebar handlePersonalChange={handlePersonalChange} />
         <DisplayCV personalDetailsContent={personalDetailsData} />
       </div>
     </>

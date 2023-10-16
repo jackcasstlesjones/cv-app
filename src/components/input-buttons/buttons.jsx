@@ -1,7 +1,12 @@
-export default function Buttons({ nameValue, setNameContent }) {
+export default function Buttons({
+  nameValue,
+  emailValue,
+  phoneValue,
+  handlePersonalChange,
+}) {
   function onButtonClick() {
     console.log(nameValue);
-    setNameContent(nameValue);
+    handlePersonalChange(nameValue, emailValue, phoneValue);
   }
   return (
     <div className="button-container">
