@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useSyncExternalStore } from "react";
 
 import "./App.css";
 
@@ -6,21 +6,23 @@ import DisplayCV from "./components/cv-display/cv-display";
 import Sidebar from "./components/sidebar/sidebar";
 
 function App() {
-  const [headerContent, setHeaderContent] = useState({
-    name: "Jack Casstles-Jones",
-    email: "jackcasstlesjones@gmail.com",
-    phone: "0493673312",
-  });
+  const [nameValue, setNameValue] = useState("Jack CJ");
+  const [emailvalue, setEmailValue] = useState("jackcasstles@gmail.com");
+  const [phoneValue, setPhoneValue] = useState("0493673312");
 
-  const handleHeaderChange = (newHeader) => {
-    setHeaderContent(newHeader);
+  const setNameContent = (newName) => {
+    setNameValue(newName);
+  };
+
+  const setEmailContent = (newEmail) => {
+    setEmailValue(newEmail);
   };
 
   return (
     <>
       <div className="big-container">
-        <Sidebar setHeaderContent={handleHeaderChange} />
-        <DisplayCV headerContent={headerContent} />
+        <Sidebar setNameContent={setNameContent} />
+        <DisplayCV nameContent={nameValue} />
       </div>
     </>
   );

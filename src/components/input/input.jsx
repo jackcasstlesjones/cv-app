@@ -7,7 +7,7 @@ export default function Inputs({
   firstField,
   secondField,
   thirdField,
-  setHeaderContent,
+  setNameContent,
 }) {
   const [nameValue, setNameValue] = useState("");
 
@@ -49,7 +49,7 @@ export default function Inputs({
           />
         </div>
       </form>
-      <Buttons nameValue={nameValue} setHeaderContent={setHeaderContent} />
+      <Buttons nameValue={nameValue} setNameContent={setNameContent} />
     </div>
   );
 }
