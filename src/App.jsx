@@ -6,17 +6,17 @@ import DisplayCV from "./components/cv-display/cv-display";
 import Sidebar from "./components/sidebar/sidebar";
 
 function App() {
-  const [headCont, setheaderContent] = useState("placeholder");
+  const [headConter, setHeaderContent] = useState("placeholder");
 
   const handleHeaderChange = (newHeader) => {
-    setheaderContent(newHeader);
+    setHeaderContent(newHeader);
   };
 
   return (
     <>
       <div className="big-container">
         <Sidebar setHeaderContent={handleHeaderChange} />
-        <DisplayCV headerContent={headCont} />
+        <DisplayCV headerContent={headConter} />
       </div>
     </>
   );
