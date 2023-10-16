@@ -8,11 +8,6 @@ import Sidebar from "./components/sidebar/sidebar";
 
 function App() {
   const [headCont, setheadCont] = useState("placeholder");
-  const [inputValue, setInputValue] = useState("");
-
-  const handleInputChange = (event) => {
-    setInputValue(event.target.value);
-  };
 
   const handleHeaderChange = (newHeader) => {
     setheadCont(newHeader);
@@ -21,7 +16,7 @@ function App() {
   return (
     <>
       <div className="big-container">
-        <Sidebar />
+        <Sidebar handleHeaderChange={handleHeaderChange} />
         <DisplayCV headerContent={headCont} />
       </div>
     </>

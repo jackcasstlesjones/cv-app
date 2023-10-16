@@ -1,12 +1,13 @@
 import DisplayCV from "../cv-display/cv-display";
 import "./input.css";
 
-export default function Inputs({
-  title,
-  setHeadCont,
-  changeFunction,
-  inputValue,
-}) {
+export default function Inputs({ title, setHeadCont, handleHeaderChange }) {
+  const [inputValue, setInputValue] = useState("");
+
+  const handleInputChange = (event) => {
+    setInputValue(event.target.value);
+  };
+
   const handleClick = (e) => {
     e.preventDefault();
     setHeadCont(inputValue);
@@ -20,7 +21,7 @@ export default function Inputs({
           <label htmlFor="cv-name">Full Name</label>
           <input
             className="text-input"
-            onChange={changeFunction}
+            onChange={handleInputChange}
             type="text"
             name=""
             id="cv-name"
@@ -53,7 +54,7 @@ export default function Inputs({
           <button className="form-button" onClick={handleClick}>
             Edit
           </button>
-          <button className="form-button" onClick={handleClick}>
+          <button className="form-button" onClick={handleHeaderChange}>
             Submit
           </button>
         </div>
