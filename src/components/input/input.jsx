@@ -1,64 +1,42 @@
-import DisplayCV from "../cv-display/cv-display";
+import Buttons from "../input-buttons/buttons";
 import "./input.css";
 
-export default function Inputs({ title, setHeadCont, handleHeaderChange }) {
-  const [inputValue, setInputValue] = useState("");
-
-  const handleInputChange = (event) => {
-    setInputValue(event.target.value);
-  };
-
-  const handleClick = (e) => {
-    e.preventDefault();
-    setHeadCont(inputValue);
-  };
-
+export default function Inputs({ title, firstField, secondField, thirdField }) {
   return (
     <div className="input-container">
       <h2>{title}</h2>
       <form autoComplete="off" action="" className="form">
         <div className="form-pair">
-          <label htmlFor="cv-name">Full Name</label>
+          <label htmlFor={firstField}>{firstField}</label>
           <input
             className="text-input"
-            onChange={handleInputChange}
             type="text"
-            name=""
-            id="cv-name"
-            placeholder="Joe Bloggs..."
+            name={firstField}
+            id={firstField}
           />
         </div>
 
         <div className="form-pair">
-          <label htmlFor="email">Email Address</label>
+          <label htmlFor={secondField}>{secondField}</label>
           <input
             className="text-input"
-            type="text"
-            name=""
-            id=""
-            placeholder="hello"
+            type={secondField}
+            name={secondField}
+            id={secondField}
           />
         </div>
 
         <div className="form-pair">
-          <label htmlFor="phone-number">Phone Number</label>
+          <label htmlFor={thirdField}>{thirdField}</label>
           <input
             className="text-input"
             type="text"
-            name=""
-            id=""
-            placeholder="hello"
+            name={thirdField}
+            id={thirdField}
           />
-        </div>
-        <div className="button-container">
-          <button className="form-button" onClick={handleClick}>
-            Edit
-          </button>
-          <button className="form-button" onClick={handleHeaderChange}>
-            Submit
-          </button>
         </div>
       </form>
+      <Buttons />
     </div>
   );
 }

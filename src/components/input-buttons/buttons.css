@@ -1,0 +1,14 @@
+.button-container {
+  display: flex;
+  justify-content: center;
+  gap: 42px;
+}
+
+.form-button {
+  font-size: 16px;
+  padding: 12px 16px;
+  border: none;
+  border-radius: 8px;
+  background-color: rgba(0, 0, 0, 0.901);
+  color: white;
+}
