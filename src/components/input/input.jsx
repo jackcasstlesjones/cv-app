@@ -8,6 +8,7 @@ export default function Inputs({
   secondField,
   thirdField,
   handlePersonalChange,
+  personalDetailsData,
 }) {
   const [nameValue, setNameValue] = useState("");
   const [emailValue, setEmailValue] = useState("");
@@ -24,6 +25,7 @@ export default function Inputs({
             type="text"
             name={firstField}
             id={firstField}
+            value={nameValue}
             onChange={(e) => {
               setNameValue(e.target.value);
               console.log(nameValue);
@@ -38,6 +40,7 @@ export default function Inputs({
             type={secondField}
             name={secondField}
             id={secondField}
+            value={emailValue}
             onChange={(e) => {
               setEmailValue(e.target.value);
               console.log(emailValue);
@@ -52,6 +55,7 @@ export default function Inputs({
             type="text"
             name={thirdField}
             id={thirdField}
+            value={phoneValue}
             onChange={(e) => {
               setPhoneValue(e.target.value);
               console.log(phoneValue);
@@ -61,9 +65,13 @@ export default function Inputs({
       </form>
       <Buttons
         nameValue={nameValue}
+        setNameValue={setNameValue}
         emailValue={emailValue}
+        setEmailValue={setEmailValue}
         phoneValue={phoneValue}
+        setPhoneValue={setPhoneValue}
         handlePersonalChange={handlePersonalChange}
+        personalDetailsData={personalDetailsData}
       />
     </div>
   );

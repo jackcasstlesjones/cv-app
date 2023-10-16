@@ -1,7 +1,7 @@
 import Inputs from "../input/input";
 import "./sidebar.css";
 
-export default function Sidebar({ handlePersonalChange }) {
+export default function Sidebar({ handlePersonalChange, personalDetailsData }) {
   class Details {
     constructor(title, firstField, secondField, thirdField) {
       this.title = title;
@@ -37,6 +37,7 @@ export default function Sidebar({ handlePersonalChange }) {
         <Inputs
           {...personalDetailsInput}
           handlePersonalChange={handlePersonalChange}
+          personalDetailsData={personalDetailsData}
         />
 
         <Inputs {...educationDetailsInput} />

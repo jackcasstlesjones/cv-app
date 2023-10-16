@@ -23,7 +23,10 @@ function App() {
   return (
     <>
       <div className="big-container">
-        <Sidebar handlePersonalChange={handlePersonalChange} />
+        <Sidebar
+          personalDetailsData={personalDetailsData}
+          handlePersonalChange={handlePersonalChange}
+        />
         <DisplayCV personalDetailsContent={personalDetailsData} />
       </div>
     </>

@@ -1,17 +1,36 @@
+import "./buttons.css";
+
 export default function Buttons({
   nameValue,
+  setNameValue,
   emailValue,
+  setEmailValue,
   phoneValue,
+  setPhoneValue,
   handlePersonalChange,
+  personalDetailsData,
 }) {
-  function onButtonClick() {
+  function onSubmitButtonClick() {
     console.log(nameValue);
     handlePersonalChange(nameValue, emailValue, phoneValue);
+    setNameValue("");
+    setEmailValue("");
+    setPhoneValue("");
   }
+
+  function onEditButtonClick() {
+    setNameValue(personalDetailsData.fullName);
+    setEmailValue(personalDetailsData.email);
+    setPhoneValue(personalDetailsData.phone);
+    handlePersonalChange("", "", "");
+  }
+
   return (
     <div className="button-container">
-      <button className="form-button">Edit</button>
-      <button onClick={onButtonClick} className="form-button">
+      <button onClick={onEditButtonClick} className="form-button">
+        Edit
+      </button>
+      <button onClick={onSubmitButtonClick} className="form-button">
         Submit
       </button>
     </div>
