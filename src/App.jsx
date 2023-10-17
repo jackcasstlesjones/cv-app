@@ -7,9 +7,9 @@ import Sidebar from "./components/sidebar/sidebar";
 
 function App() {
   const [personalDetailsData, setPersonalDetailsData] = useState({
-    fullName: "Jack",
-    email: "email@",
-    phone: "047",
+    fullName: "",
+    email: "",
+    phone: "",
   });
 
   const [isSubmitted, setIsSubmitted] = useState(false);

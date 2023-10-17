@@ -12,6 +12,9 @@ export default function Buttons({
   setIsSubmitted,
 }) {
   function onSubmitButtonClick() {
+    if (nameValue === "") {
+      return;
+    }
     handlePersonalChange(nameValue, emailValue, phoneValue);
     setIsSubmitted(true);
   }

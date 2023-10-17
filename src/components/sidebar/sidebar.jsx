@@ -1,4 +1,4 @@
-import Inputs from "../input/input";
+import Inputs from "../personal-input/personal-input";
 import "./sidebar.css";
 
 export default function Sidebar({

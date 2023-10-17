@@ -1,5 +1,5 @@
 import Buttons from "../input-buttons/buttons";
-import "./input.css";
+import "./personal-input.css";
 import { useState } from "react";
 
 export default function Inputs({
