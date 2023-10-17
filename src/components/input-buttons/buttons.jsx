@@ -12,14 +12,15 @@ export default function Buttons({
   setIsSubmitted,
 }) {
   function onSubmitButtonClick() {
-    setIsSubmitted("boos");
+    handlePersonalChange(nameValue, emailValue, phoneValue);
+    setIsSubmitted(true);
   }
 
   function onEditButtonClick() {
+    setIsSubmitted(false);
     setNameValue(personalDetailsData.fullName);
     setEmailValue(personalDetailsData.email);
     setPhoneValue(personalDetailsData.phone);
-    handlePersonalChange("", "", "");
   }
 
   return (

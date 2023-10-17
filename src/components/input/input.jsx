@@ -11,6 +11,7 @@ export default function Inputs({
   handlePersonalChange,
   personalDetailsData,
   setIsSubmitted,
+  isSubmitted,
 }) {
   const [nameValue, setNameValue] = useState("");
   const [emailValue, setEmailValue] = useState("");
@@ -30,7 +31,7 @@ export default function Inputs({
             type="text"
             name={firstField}
             id={firstField}
-            value={nameValue}
+            value={!isSubmitted ? nameValue : ""}
             onChange={(e) => {
               setNameValue(e.target.value);
               console.log(nameValue);
@@ -45,7 +46,7 @@ export default function Inputs({
             type={secondField}
             name={secondField}
             id={secondField}
-            value={emailValue}
+            value={!isSubmitted ? emailValue : ""}
             onChange={(e) => {
               setEmailValue(e.target.value);
               console.log(emailValue);
@@ -60,7 +61,7 @@ export default function Inputs({
             type="text"
             name={thirdField}
             id={thirdField}
-            value={phoneValue}
+            value={!isSubmitted ? phoneValue : ""}
             onChange={(e) => {
               setPhoneValue(e.target.value);
               console.log(phoneValue);

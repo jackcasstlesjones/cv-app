@@ -5,6 +5,7 @@ export default function Sidebar({
   handlePersonalChange,
   personalDetailsData,
   setIsSubmitted,
+  isSubmitted,
 }) {
   class Details {
     constructor(title, firstField, secondField, thirdField, svg) {
@@ -92,6 +93,7 @@ export default function Sidebar({
           handlePersonalChange={handlePersonalChange}
           personalDetailsData={personalDetailsData}
           setIsSubmitted={setIsSubmitted}
+          isSubmitted={isSubmitted}
         />
 
         <Inputs {...educationDetailsInput} />

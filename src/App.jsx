@@ -14,8 +14,8 @@ function App() {
 
   const [isSubmitted, setIsSubmitted] = useState(false);
 
-  const reverseSubmittedBoolean = () => {
-    setIsSubmitted(!isSubmitted);
+  const reverseSubmittedBoolean = (value) => {
+    setIsSubmitted(value);
     console.log(isSubmitted);
   };
 
@@ -31,6 +31,7 @@ function App() {
     <>
       <div className="big-container">
         <Sidebar
+          isSubmitted={isSubmitted}
           setIsSubmitted={reverseSubmittedBoolean}
           personalDetailsData={personalDetailsData}
           handlePersonalChange={handlePersonalChange}

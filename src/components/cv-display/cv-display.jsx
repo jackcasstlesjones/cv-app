@@ -6,11 +6,11 @@ export default function DisplayCV({ personalDetailsContent, isSubmitted }) {
     <>
       <div className="cv-container">
         <div className="cv-header">
-          <h1>{fullName}</h1>
+          <h1>{isSubmitted ? fullName : ""}</h1>
           <div className="email-phone-container">
-            <p className="email-address">Email: {email}</p>
+            <p className="email-address">Email: {isSubmitted ? email : ""}</p>
             <p className="phone-number">
-              Phone Number: {isSubmitted ? "boos" : "books"}
+              Phone Number: {isSubmitted ? phone : ""}
             </p>
           </div>
         </div>
