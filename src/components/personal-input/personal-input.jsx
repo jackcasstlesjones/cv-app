@@ -79,6 +79,9 @@ export default function PersonalInputs({
         handleDataChange={handlePersonalChange}
         dataOnCV={personalDetailsData}
         setIsSubmitted={setIsSubmitted}
+        subValueOne={"fullName"}
+        subValueTwo={"email"}
+        subValueThree={"phone"}
       />
     </div>
   );

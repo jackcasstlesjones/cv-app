@@ -13,9 +13,9 @@ function App() {
   });
 
   const [educationDetailsData, setEducationDetailsData] = useState({
-    university: "Manchester",
-    degree: "createive",
-    dates: "march",
+    university: "",
+    degree: "",
+    dates: "",
   });
 
   const [isSubmitted, setIsSubmitted] = useState(false);

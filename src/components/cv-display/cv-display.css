@@ -4,6 +4,7 @@
   display: flex;
   margin: 0 auto;
   flex-direction: column;
+  font-family: "Times New Roman", Times, serif;
 }
 
 .cv-header {
@@ -24,6 +25,7 @@
 .cv-body {
   background-color: white;
   height: 100%;
+  padding: 32px;
 }
 .cv-footer {
   background-color: green;
