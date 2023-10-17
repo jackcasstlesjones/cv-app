@@ -20,7 +20,6 @@ export default function DisplayCV({
           </div>
         </div>
         <div className="cv-body">
-          Body
           <p>{isSubmitted ? university : ""}</p>
           <p>{isSubmitted ? degree : ""}</p>
           <p>{isSubmitted ? dates : ""}</p>
