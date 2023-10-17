@@ -12,6 +12,12 @@ export default function EducationInputs({
   const [degreeValue, setDegreeValue] = useState("");
   const [datesStudiedValue, setDatesStudiedValue] = useState("");
 
+  const parentValues = {
+    valueOne: universityValue,
+    valueTwo: degreeValue,
+    valueThree: datesStudiedValue,
+  };
+
   return (
     <div className="input-container">
       <div className="title-svg-div">
@@ -77,9 +83,7 @@ export default function EducationInputs({
         </div>
       </form>
       <Buttons
-        valueOne={universityValue}
-        valueTwo={degreeValue}
-        valueThree={datesStudiedValue}
+        {...parentValues}
         handleDataChange={handleEducationChange}
         dataOnParent={educationDetailsData}
         setParentData={setEducationDetailsData}

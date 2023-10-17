@@ -32,9 +32,6 @@ export default function Buttons({
       ...prevState,
       submitted: false,
     }));
-    // setValueOne(dataOnCV[subValueOne]);
-    // setValueTwo(dataOnCV[subValueTwo]);
-    // setValueThree(dataOnCV[subValueThree]);
   }
 
   return (

@@ -11,6 +11,12 @@ export default function PersonalInputs({
   const [emailValue, setEmailValue] = useState("");
   const [phoneValue, setPhoneValue] = useState("");
 
+  const parentValues = {
+    valueOne: nameValue,
+    valueTwo: emailValue,
+    valueThree: phoneValue,
+  };
+
   return (
     <div className="input-container">
       <div className="title-svg-div">
@@ -79,9 +85,7 @@ export default function PersonalInputs({
         </div>
       </form>
       <Buttons
-        valueOne={nameValue}
-        valueTwo={emailValue}
-        valueThree={phoneValue}
+        {...parentValues}
         handleDataChange={handlePersonalChange}
         dataOnParent={personalDetailsData}
         setParentData={setPersonalDetailsData}

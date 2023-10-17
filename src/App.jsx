@@ -48,8 +48,6 @@ function App() {
     <>
       <div className="big-container">
         <Sidebar
-          isSubmitted={isSubmitted}
-          setIsSubmitted={reverseSubmittedBoolean}
           personalDetailsData={personalDetailsData}
           handlePersonalChange={handlePersonalChange}
           educationDetailsData={educationDetailsData}
