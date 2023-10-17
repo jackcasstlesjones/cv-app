@@ -1,7 +1,11 @@
 import Inputs from "../input/input";
 import "./sidebar.css";
 
-export default function Sidebar({ handlePersonalChange, personalDetailsData }) {
+export default function Sidebar({
+  handlePersonalChange,
+  personalDetailsData,
+  setIsSubmitted,
+}) {
   class Details {
     constructor(title, firstField, secondField, thirdField, svg) {
       this.title = title;
@@ -87,6 +91,7 @@ export default function Sidebar({ handlePersonalChange, personalDetailsData }) {
           {...personalDetailsInput}
           handlePersonalChange={handlePersonalChange}
           personalDetailsData={personalDetailsData}
+          setIsSubmitted={setIsSubmitted}
         />
 
         <Inputs {...educationDetailsInput} />

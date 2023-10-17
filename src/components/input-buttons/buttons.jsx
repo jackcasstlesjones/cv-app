@@ -9,13 +9,10 @@ export default function Buttons({
   setPhoneValue,
   handlePersonalChange,
   personalDetailsData,
+  setIsSubmitted,
 }) {
   function onSubmitButtonClick() {
-    console.log(nameValue);
-    handlePersonalChange(nameValue, emailValue, phoneValue);
-    setNameValue("");
-    setEmailValue("");
-    setPhoneValue("");
+    setIsSubmitted("boos");
   }
 
   function onEditButtonClick() {

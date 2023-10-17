@@ -10,6 +10,7 @@ export default function Inputs({
   svg,
   handlePersonalChange,
   personalDetailsData,
+  setIsSubmitted,
 }) {
   const [nameValue, setNameValue] = useState("");
   const [emailValue, setEmailValue] = useState("");
@@ -76,6 +77,7 @@ export default function Inputs({
         setPhoneValue={setPhoneValue}
         handlePersonalChange={handlePersonalChange}
         personalDetailsData={personalDetailsData}
+        setIsSubmitted={setIsSubmitted}
       />
     </div>
   );

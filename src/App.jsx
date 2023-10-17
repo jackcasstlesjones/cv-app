@@ -12,6 +12,13 @@ function App() {
     phone: "047",
   });
 
+  const [isSubmitted, setIsSubmitted] = useState(false);
+
+  const reverseSubmittedBoolean = () => {
+    setIsSubmitted(!isSubmitted);
+    console.log(isSubmitted);
+  };
+
   const handlePersonalChange = (userName, userEmail, userPhone) => {
     setPersonalDetailsData(() => ({
       fullName: userName,
@@ -24,10 +31,14 @@ function App() {
     <>
       <div className="big-container">
         <Sidebar
+          setIsSubmitted={reverseSubmittedBoolean}
           personalDetailsData={personalDetailsData}
           handlePersonalChange={handlePersonalChange}
         />
-        <DisplayCV personalDetailsContent={personalDetailsData} />
+        <DisplayCV
+          isSubmitted={isSubmitted}
+          personalDetailsContent={personalDetailsData}
+        />
       </div>
     </>
   );
