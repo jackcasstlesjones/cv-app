@@ -1,15 +1,17 @@
 import Buttons from "../input-buttons/buttons";
-import "./personal-input.css";
+import "./education-input.css";
 import { useState } from "react";
 
-export default function Inputs({
+export default function EducationInputs({
   title,
   firstField,
   secondField,
   thirdField,
   svg,
-  handlePersonalChange,
-  personalDetailsData,
+
+  handleEducationChange,
+  educationDetailsData,
+
   setIsSubmitted,
   isSubmitted,
 }) {
@@ -34,7 +36,6 @@ export default function Inputs({
             value={!isSubmitted ? universityValue : ""}
             onChange={(e) => {
               setUniversityValue(e.target.value);
-              console.log(nameValue);
             }}
           />
         </div>
@@ -49,7 +50,6 @@ export default function Inputs({
             value={!isSubmitted ? degreeValue : ""}
             onChange={(e) => {
               setDegreeValue(e.target.value);
-              console.log(emailValue);
             }}
           />
         </div>
@@ -61,23 +61,22 @@ export default function Inputs({
             type="text"
             name={thirdField}
             id={thirdField}
-            value={!isSubmitted ? setDatesStudiedValue : ""}
+            value={!isSubmitted ? datesStudiedValue : ""}
             onChange={(e) => {
               setDatesStudiedValue(e.target.value);
-              console.log(phoneValue);
             }}
           />
         </div>
       </form>
       <Buttons
-        valueOne={nameValue}
-        setValueOne={setNameValue}
-        valueTwo={emailValue}
-        setValueTwo={setEmailValue}
-        valueThree={phoneValue}
-        setValueThree={setPhoneValue}
-        handlePersonalChange={handlePersonalChange}
-        personalDetailsData={personalDetailsData}
+        valueOne={universityValue}
+        setValueOne={setUniversityValue}
+        valueTwo={degreeValue}
+        setValueTwo={setDegreeValue}
+        valueThree={datesStudiedValue}
+        setValueThree={setDatesStudiedValue}
+        handleDataChange={handleEducationChange}
+        dataOnCV={educationDetailsData}
         setIsSubmitted={setIsSubmitted}
       />
     </div>

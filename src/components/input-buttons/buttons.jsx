@@ -7,23 +7,26 @@ export default function Buttons({
   setValueTwo,
   valueThree,
   setValueThree,
-  handlePersonalChange,
+  handleDataChange,
   dataOnCV,
   setIsSubmitted,
+  subValueOne,
+  subValueTwo,
+  subValueThree,
 }) {
   function onSubmitButtonClick() {
     if (valueOne === "") {
       return;
     }
-    handlePersonalChange(valueOne, valueTwo, valueThree);
+    handleDataChange(valueOne, valueTwo, valueThree);
     setIsSubmitted(true);
   }
 
   function onEditButtonClick() {
     setIsSubmitted(false);
-    setValueOne(dataOnCV.fullName);
-    setValueTwo(dataOnCV.email);
-    setValueThree(dataOnCV.phone);
+    // setValueOne(dataOnCV[subValueOne]);
+    // setValueTwo(dataOnCV[subValueTwo]);
+    // setValueThree(dataOnCV[subValueThree]);
   }
 
   return (

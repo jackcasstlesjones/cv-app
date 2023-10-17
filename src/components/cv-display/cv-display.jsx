@@ -1,7 +1,12 @@
 import "./cv-display.css";
 
-export default function DisplayCV({ personalDetailsContent, isSubmitted }) {
+export default function DisplayCV({
+  personalDetailsContent,
+  isSubmitted,
+  educationDetailsContent,
+}) {
   const { fullName, email, phone } = personalDetailsContent;
+  const { university, degree, dates } = educationDetailsContent;
   return (
     <>
       <div className="cv-container">
@@ -14,7 +19,12 @@ export default function DisplayCV({ personalDetailsContent, isSubmitted }) {
             </p>
           </div>
         </div>
-        <div className="cv-body">Body</div>
+        <div className="cv-body">
+          Body
+          <p>{isSubmitted ? university : ""}</p>
+          <p>{isSubmitted ? degree : ""}</p>
+          <p>{isSubmitted ? dates : ""}</p>
+        </div>
       </div>
     </>
   );

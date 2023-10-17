@@ -12,6 +12,12 @@ function App() {
     phone: "",
   });
 
+  const [educationDetailsData, setEducationDetailsData] = useState({
+    university: "Manchester",
+    degree: "createive",
+    dates: "march",
+  });
+
   const [isSubmitted, setIsSubmitted] = useState(false);
 
   const reverseSubmittedBoolean = (value) => {
@@ -27,6 +33,14 @@ function App() {
     }));
   };
 
+  const handleEducationChange = (userUniversity, userDegree, userDates) => {
+    setEducationDetailsData(() => ({
+      university: userUniversity,
+      degree: userDegree,
+      dates: userDates,
+    }));
+  };
+
   return (
     <>
       <div className="big-container">
@@ -35,10 +49,13 @@ function App() {
           setIsSubmitted={reverseSubmittedBoolean}
           personalDetailsData={personalDetailsData}
           handlePersonalChange={handlePersonalChange}
+          educationDetailsData={educationDetailsData}
+          handleEducationChange={handleEducationChange}
         />
         <DisplayCV
           isSubmitted={isSubmitted}
           personalDetailsContent={personalDetailsData}
+          educationDetailsContent={educationDetailsData}
         />
       </div>
     </>

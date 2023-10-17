@@ -2,7 +2,7 @@ import Buttons from "../input-buttons/buttons";
 import "./personal-input.css";
 import { useState } from "react";
 
-export default function Inputs({
+export default function PersonalInputs({
   title,
   firstField,
   secondField,
@@ -76,7 +76,7 @@ export default function Inputs({
         setValueTwo={setEmailValue}
         valueThree={phoneValue}
         setValueThree={setPhoneValue}
-        handlePersonalChange={handlePersonalChange}
+        handleDataChange={handlePersonalChange}
         dataOnCV={personalDetailsData}
         setIsSubmitted={setIsSubmitted}
       />

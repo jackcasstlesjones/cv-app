@@ -1,9 +1,14 @@
-import Inputs from "../personal-input/personal-input";
+import PersonalInputs from "../personal-input/personal-input";
+import EducationInputs from "../education-input/education-input";
 import "./sidebar.css";
 
 export default function Sidebar({
   handlePersonalChange,
   personalDetailsData,
+
+  handleEducationChange,
+  educationDetailsData,
+
   setIsSubmitted,
   isSubmitted,
 }) {
@@ -88,17 +93,24 @@ export default function Sidebar({
   return (
     <>
       <div className="sidebar">
-        <Inputs
+        <PersonalInputs
           {...personalDetailsInput}
           handlePersonalChange={handlePersonalChange}
           personalDetailsData={personalDetailsData}
           setIsSubmitted={setIsSubmitted}
           isSubmitted={isSubmitted}
+          subValueOne={"fullName"}
+          subValueTwo={"email"}
+          subValueThree={"phone"}
         />
 
-        <Inputs {...educationDetailsInput} />
-
-        <Inputs {...workDetailsInput} />
+        <EducationInputs
+          {...educationDetailsInput}
+          handleEducationChange={handleEducationChange}
+          educationDetailsData={educationDetailsData}
+          setIsSubmitted={setIsSubmitted}
+          isSubmitted={isSubmitted}
+        />
       </div>
     </>
   );
