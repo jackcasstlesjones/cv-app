@@ -3,9 +3,7 @@ import "./education-input.css";
 import { useState } from "react";
 
 export default function EducationInputs({
-  handleEducationChange,
   educationDetailsData,
-
   setEducationDetailsData,
 }) {
   const [universityValue, setUniversityValue] = useState("");
@@ -16,6 +14,12 @@ export default function EducationInputs({
     valueOne: universityValue,
     valueTwo: degreeValue,
     valueThree: datesStudiedValue,
+  };
+
+  const parentKeys = {
+    keyOne: "university",
+    keyTwo: "degree",
+    keyThree: "dates",
   };
 
   return (
@@ -84,7 +88,7 @@ export default function EducationInputs({
       </form>
       <Buttons
         {...parentValues}
-        handleDataChange={handleEducationChange}
+        {...parentKeys}
         dataOnParent={educationDetailsData}
         setParentData={setEducationDetailsData}
       />

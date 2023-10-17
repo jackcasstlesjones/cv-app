@@ -1,25 +1,22 @@
 import Buttons from "../input-buttons/buttons";
-import "./personal-input.css";
+
 import { useState } from "react";
 
-export default function PersonalInputs({
-  personalDetailsData,
-  setPersonalDetailsData,
-}) {
-  const [nameValue, setNameValue] = useState("");
-  const [emailValue, setEmailValue] = useState("");
-  const [phoneValue, setPhoneValue] = useState("");
+export default function WorkInputs({ workDetailsData, setWorkDetailsData }) {
+  const [companyValue, setCompanyValue] = useState("");
+  const [jobValue, setJobValue] = useState("");
+  const [datesWorkedValue, setDatesWorkedValue] = useState("");
 
   const parentValues = {
-    valueOne: nameValue,
-    valueTwo: emailValue,
-    valueThree: phoneValue,
+    valueOne: companyValue,
+    valueTwo: jobValue,
+    valueThree: datesWorkedValue,
   };
 
   const parentKeys = {
-    keyOne: "fullName",
-    keyTwo: "email",
-    keyThree: "phone",
+    keyOne: "company",
+    keyTwo: "job",
+    keyThree: "datesWorked",
   };
 
   return (
@@ -41,50 +38,47 @@ export default function PersonalInputs({
             />
           </svg>
         </svg>
-        <h2>Personal Information</h2>
+        <h2>Work Experience</h2>
       </div>
       <form autoComplete="off" action="" className="form">
         <div className="form-pair">
-          <label htmlFor="fullName">Full Name</label>
+          <label htmlFor="company">Company</label>
           <input
             className="text-input"
             type="text"
-            name="fullName"
-            id="fullName"
-            value={!personalDetailsData.submitted ? nameValue : ""}
+            name="company"
+            id="company"
+            value={!workDetailsData.submitted ? companyValue : ""}
             onChange={(e) => {
-              setNameValue(e.target.value);
-              console.log(nameValue);
+              setCompanyValue(e.target.value);
             }}
           />
         </div>
 
         <div className="form-pair">
-          <label htmlFor="email">Email</label>
+          <label htmlFor="job">Job Titles</label>
           <input
             className="text-input"
             type="text"
-            name="email"
-            id="email"
-            value={!personalDetailsData.submitted ? emailValue : ""}
+            name="job"
+            id="job"
+            value={!workDetailsData.submitted ? jobValue : ""}
             onChange={(e) => {
-              setEmailValue(e.target.value);
-              console.log(emailValue);
+              setJobValue(e.target.value);
             }}
           />
         </div>
 
         <div className="form-pair">
-          <label htmlFor="phone-number">Phone Number</label>
+          <label htmlFor="dates-worked">Dates Worked</label>
           <input
             className="text-input"
             type="text"
-            name="phone-number"
-            id="phone-number"
-            value={!personalDetailsData.submitted ? phoneValue : ""}
+            name="dates-worked"
+            id="dates-worked"
+            value={!workDetailsData.submitted ? datesWorkedValue : ""}
             onChange={(e) => {
-              setPhoneValue(e.target.value);
-              console.log(phoneValue);
+              setDatesWorkedValue(e.target.value);
             }}
           />
         </div>
@@ -92,8 +86,8 @@ export default function PersonalInputs({
       <Buttons
         {...parentValues}
         {...parentKeys}
-        dataOnParent={personalDetailsData}
-        setParentData={setPersonalDetailsData}
+        dataOnParent={workDetailsData}
+        setParentData={setWorkDetailsData}
       />
     </div>
   );

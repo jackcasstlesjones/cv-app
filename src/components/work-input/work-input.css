@@ -1,0 +1,48 @@
+.input-container {
+  background-color: white;
+  padding: 20px 54.5px 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  /* width: 100%; */
+  border-radius: 35px;
+  margin: auto;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+}
+
+.title-svg-div {
+  display: flex;
+  align-items: center;
+}
+
+.title-svg {
+  width: 48px;
+  height: 48px;
+  margin-right: 24px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 33px;
+}
+
+.form-pair {
+  display: flex;
+  flex-direction: column;
+  gap: 7.5px;
+  width: 400px;
+}
+
+.form-pair label {
+  font-size: 16px;
+  font-family: inherit;
+}
+
+.text-input {
+  border: none;
+  font-size: 16px;
+  padding: 8px;
+  border-radius: 8px;
+  background-color: #ededed;
+}

@@ -1,29 +1,34 @@
 import PersonalInputs from "../personal-input/personal-input";
 import EducationInputs from "../education-input/education-input";
+import WorkInputs from "../work-input/work-input";
 import "./sidebar.css";
 
 export default function Sidebar({
-  handlePersonalChange,
   personalDetailsData,
   setPersonalDetailsData,
 
   setEducationDetailsData,
-  handleEducationChange,
   educationDetailsData,
+
+  workDetailsData,
+  setWorkDetailsData,
 }) {
   return (
     <>
       <div className="sidebar">
         <PersonalInputs
-          handlePersonalChange={handlePersonalChange}
           personalDetailsData={personalDetailsData}
           setPersonalDetailsData={setPersonalDetailsData}
         />
 
         <EducationInputs
-          handleEducationChange={handleEducationChange}
           educationDetailsData={educationDetailsData}
           setEducationDetailsData={setEducationDetailsData}
+        />
+
+        <WorkInputs
+          workDetailsData={workDetailsData}
+          setWorkDetailsData={setWorkDetailsData}
         />
       </div>
     </>

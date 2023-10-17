@@ -20,36 +20,44 @@ function App() {
     submitted: false,
   });
 
-  const handlePersonalChange = (userName, userEmail, userPhone) => {
-    setPersonalDetailsData(() => ({
-      fullName: userName,
-      email: userEmail,
-      phone: userPhone,
-    }));
-  };
+  const [workDetailsData, setWorkDetailsData] = useState({
+    company: "",
+    job: "",
+    datesWorked: "",
+    submitted: false,
+  });
 
-  const handleEducationChange = (userUniversity, userDegree, userDates) => {
-    setEducationDetailsData(() => ({
-      university: userUniversity,
-      degree: userDegree,
-      dates: userDates,
-    }));
-  };
+  // const handlePersonalChange = (userName, userEmail, userPhone) => {
+  //   setPersonalDetailsData(() => ({
+  //     fullName: userName,
+  //     email: userEmail,
+  //     phone: userPhone,
+  //   }));
+  // };
+
+  // const handleEducationChange = (userUniversity, userDegree, userDates) => {
+  //   setEducationDetailsData(() => ({
+  //     university: userUniversity,
+  //     degree: userDegree,
+  //     dates: userDates,
+  //   }));
+  // };
 
   return (
     <>
       <div className="big-container">
         <Sidebar
           personalDetailsData={personalDetailsData}
-          handlePersonalChange={handlePersonalChange}
           educationDetailsData={educationDetailsData}
-          handleEducationChange={handleEducationChange}
           setPersonalDetailsData={setPersonalDetailsData}
           setEducationDetailsData={setEducationDetailsData}
+          workDetailsData={workDetailsData}
+          setWorkDetailsData={setWorkDetailsData}
         />
         <DisplayCV
           personalDetailsContent={personalDetailsData}
           educationDetailsContent={educationDetailsData}
+          workDetailsContent={workDetailsData}
         />
       </div>
     </>

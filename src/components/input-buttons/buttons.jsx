@@ -2,15 +2,10 @@ import "./buttons.css";
 
 export default function Buttons({
   valueOne,
-
   valueTwo,
-
   valueThree,
 
-  handleDataChange,
-
   dataOnParent,
-
   setParentData,
 
   keyOne,
@@ -21,14 +16,13 @@ export default function Buttons({
     if (valueOne === "") {
       return;
     }
-    handleDataChange(valueOne, valueTwo, valueThree);
 
-    setParentData((prevState) => ({
+    setParentData({
       [keyOne]: valueOne,
       [keyTwo]: valueTwo,
       [keyThree]: valueThree,
       submitted: true,
-    }));
+    });
 
     console.log(dataOnParent);
   }
