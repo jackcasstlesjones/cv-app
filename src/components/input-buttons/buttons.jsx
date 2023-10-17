@@ -12,6 +12,10 @@ export default function Buttons({
   dataOnParent,
 
   setParentData,
+
+  keyOne,
+  keyTwo,
+  keyThree,
 }) {
   function onSubmitButtonClick() {
     if (valueOne === "") {
@@ -20,7 +24,9 @@ export default function Buttons({
     handleDataChange(valueOne, valueTwo, valueThree);
 
     setParentData((prevState) => ({
-      ...prevState,
+      [keyOne]: valueOne,
+      [keyTwo]: valueTwo,
+      [keyThree]: valueThree,
       submitted: true,
     }));
 

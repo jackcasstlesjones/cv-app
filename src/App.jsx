@@ -20,14 +20,6 @@ function App() {
     submitted: false,
   });
 
-  const [isSubmitted, setIsSubmitted] = useState(false);
-
-  const reverseSubmittedBoolean = (value) => {
-    setIsSubmitted(value);
-
-    console.log(isSubmitted);
-  };
-
   const handlePersonalChange = (userName, userEmail, userPhone) => {
     setPersonalDetailsData(() => ({
       fullName: userName,
@@ -56,7 +48,6 @@ function App() {
           setEducationDetailsData={setEducationDetailsData}
         />
         <DisplayCV
-          isSubmitted={isSubmitted}
           personalDetailsContent={personalDetailsData}
           educationDetailsContent={educationDetailsData}
         />
