@@ -13,9 +13,9 @@ export default function Inputs({
   setIsSubmitted,
   isSubmitted,
 }) {
-  const [nameValue, setNameValue] = useState("");
-  const [emailValue, setEmailValue] = useState("");
-  const [phoneValue, setPhoneValue] = useState("");
+  const [universityValue, setUniversityValue] = useState("");
+  const [degreeValue, setDegreeValue] = useState("");
+  const [datesStudiedValue, setDatesStudiedValue] = useState("");
 
   return (
     <div className="input-container">
@@ -31,9 +31,9 @@ export default function Inputs({
             type="text"
             name={firstField}
             id={firstField}
-            value={!isSubmitted ? nameValue : ""}
+            value={!isSubmitted ? universityValue : ""}
             onChange={(e) => {
-              setNameValue(e.target.value);
+              setUniversityValue(e.target.value);
               console.log(nameValue);
             }}
           />
@@ -46,9 +46,9 @@ export default function Inputs({
             type={secondField}
             name={secondField}
             id={secondField}
-            value={!isSubmitted ? emailValue : ""}
+            value={!isSubmitted ? degreeValue : ""}
             onChange={(e) => {
-              setEmailValue(e.target.value);
+              setDegreeValue(e.target.value);
               console.log(emailValue);
             }}
           />
@@ -61,21 +61,21 @@ export default function Inputs({
             type="text"
             name={thirdField}
             id={thirdField}
-            value={!isSubmitted ? phoneValue : ""}
+            value={!isSubmitted ? setDatesStudiedValue : ""}
             onChange={(e) => {
-              setPhoneValue(e.target.value);
+              setDatesStudiedValue(e.target.value);
               console.log(phoneValue);
             }}
           />
         </div>
       </form>
       <Buttons
-        nameValue={nameValue}
-        setNameValue={setNameValue}
-        emailValue={emailValue}
-        setEmailValue={setEmailValue}
-        phoneValue={phoneValue}
-        setPhoneValue={setPhoneValue}
+        valueOne={nameValue}
+        setValueOne={setNameValue}
+        valueTwo={emailValue}
+        setValueTwo={setEmailValue}
+        valueThree={phoneValue}
+        setValueThree={setPhoneValue}
         handlePersonalChange={handlePersonalChange}
         personalDetailsData={personalDetailsData}
         setIsSubmitted={setIsSubmitted}

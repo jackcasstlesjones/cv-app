@@ -1,29 +1,29 @@
 import "./buttons.css";
 
 export default function Buttons({
-  nameValue,
-  setNameValue,
-  emailValue,
-  setEmailValue,
-  phoneValue,
-  setPhoneValue,
+  valueOne,
+  setValueOne,
+  valueTwo,
+  setValueTwo,
+  valueThree,
+  setValueThree,
   handlePersonalChange,
-  personalDetailsData,
+  dataOnCV,
   setIsSubmitted,
 }) {
   function onSubmitButtonClick() {
-    if (nameValue === "") {
+    if (valueOne === "") {
       return;
     }
-    handlePersonalChange(nameValue, emailValue, phoneValue);
+    handlePersonalChange(valueOne, valueTwo, valueThree);
     setIsSubmitted(true);
   }
 
   function onEditButtonClick() {
     setIsSubmitted(false);
-    setNameValue(personalDetailsData.fullName);
-    setEmailValue(personalDetailsData.email);
-    setPhoneValue(personalDetailsData.phone);
+    setValueOne(dataOnCV.fullName);
+    setValueTwo(dataOnCV.email);
+    setValueThree(dataOnCV.phone);
   }
 
   return (

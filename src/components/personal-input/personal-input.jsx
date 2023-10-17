@@ -13,7 +13,6 @@ export default function Inputs({
   setIsSubmitted,
   isSubmitted,
 }) {
-  const [formValue, setFormValue] = useState({});
   const [nameValue, setNameValue] = useState("");
   const [emailValue, setEmailValue] = useState("");
   const [phoneValue, setPhoneValue] = useState("");
@@ -71,14 +70,14 @@ export default function Inputs({
         </div>
       </form>
       <Buttons
-        nameValue={nameValue}
-        setNameValue={setNameValue}
-        emailValue={emailValue}
-        setEmailValue={setEmailValue}
-        phoneValue={phoneValue}
-        setPhoneValue={setPhoneValue}
+        valueOne={nameValue}
+        setValueOne={setNameValue}
+        valueTwo={emailValue}
+        setValueTwo={setEmailValue}
+        valueThree={phoneValue}
+        setValueThree={setPhoneValue}
         handlePersonalChange={handlePersonalChange}
-        personalDetailsData={personalDetailsData}
+        dataOnCV={personalDetailsData}
         setIsSubmitted={setIsSubmitted}
       />
     </div>
