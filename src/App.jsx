@@ -10,18 +10,21 @@ function App() {
     fullName: "",
     email: "",
     phone: "",
+    submitted: false,
   });
 
   const [educationDetailsData, setEducationDetailsData] = useState({
     university: "",
     degree: "",
     dates: "",
+    submitted: false,
   });
 
   const [isSubmitted, setIsSubmitted] = useState(false);
 
   const reverseSubmittedBoolean = (value) => {
     setIsSubmitted(value);
+
     console.log(isSubmitted);
   };
 
