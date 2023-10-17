@@ -13,6 +13,7 @@ export default function DisplayCV({
     phone,
     submitted: personalSubmitted,
   } = personalDetailsContent;
+
   const {
     university,
     degree,
@@ -26,6 +27,7 @@ export default function DisplayCV({
     datesWorked,
     submitted: workSubmitted,
   } = workDetailsContent;
+
   return (
     <>
       <div className="cv-container">
