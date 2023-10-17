@@ -6,6 +6,9 @@ export default function Sidebar({
   handlePersonalChange,
   personalDetailsData,
 
+  setPersonalDetailsData,
+  setEducationDetailsData,
+
   handleEducationChange,
   educationDetailsData,
 
@@ -102,12 +105,14 @@ export default function Sidebar({
           subValueOne={"fullName"}
           subValueTwo={"email"}
           subValueThree={"phone"}
+          setPersonalDetailsData={setPersonalDetailsData}
         />
 
         <EducationInputs
           {...educationDetailsInput}
           handleEducationChange={handleEducationChange}
           educationDetailsData={educationDetailsData}
+          setEducationDetailsData={setEducationDetailsData}
           setIsSubmitted={setIsSubmitted}
           isSubmitted={isSubmitted}
         />

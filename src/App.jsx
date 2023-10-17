@@ -54,6 +54,8 @@ function App() {
           handlePersonalChange={handlePersonalChange}
           educationDetailsData={educationDetailsData}
           handleEducationChange={handleEducationChange}
+          setPersonalDetailsData={setPersonalDetailsData}
+          setEducationDetailsData={setEducationDetailsData}
         />
         <DisplayCV
           isSubmitted={isSubmitted}

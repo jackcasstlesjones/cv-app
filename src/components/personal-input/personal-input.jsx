@@ -12,6 +12,7 @@ export default function PersonalInputs({
   personalDetailsData,
   setIsSubmitted,
   isSubmitted,
+  setPersonalDetailsData,
 }) {
   const [nameValue, setNameValue] = useState("");
   const [emailValue, setEmailValue] = useState("");
@@ -31,7 +32,7 @@ export default function PersonalInputs({
             type="text"
             name={firstField}
             id={firstField}
-            value={!isSubmitted ? nameValue : ""}
+            value={!personalDetailsData.submitted ? nameValue : ""}
             onChange={(e) => {
               setNameValue(e.target.value);
               console.log(nameValue);
@@ -46,7 +47,7 @@ export default function PersonalInputs({
             type={secondField}
             name={secondField}
             id={secondField}
-            value={!isSubmitted ? emailValue : ""}
+            value={!personalDetailsData.submitted ? emailValue : ""}
             onChange={(e) => {
               setEmailValue(e.target.value);
               console.log(emailValue);
@@ -61,7 +62,7 @@ export default function PersonalInputs({
             type="text"
             name={thirdField}
             id={thirdField}
-            value={!isSubmitted ? phoneValue : ""}
+            value={!personalDetailsData.submitted ? phoneValue : ""}
             onChange={(e) => {
               setPhoneValue(e.target.value);
               console.log(phoneValue);
@@ -77,11 +78,12 @@ export default function PersonalInputs({
         valueThree={phoneValue}
         setValueThree={setPhoneValue}
         handleDataChange={handlePersonalChange}
-        dataOnCV={personalDetailsData}
+        dataOnParent={personalDetailsData}
         setIsSubmitted={setIsSubmitted}
         subValueOne={"fullName"}
         subValueTwo={"email"}
         subValueThree={"phone"}
+        setParentData={setPersonalDetailsData}
       />
     </div>
   );

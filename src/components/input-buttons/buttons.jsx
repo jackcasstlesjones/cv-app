@@ -8,22 +8,32 @@ export default function Buttons({
   valueThree,
   setValueThree,
   handleDataChange,
-  dataOnCV,
+  dataOnParent,
   setIsSubmitted,
   subValueOne,
   subValueTwo,
   subValueThree,
+  setParentData,
 }) {
   function onSubmitButtonClick() {
     if (valueOne === "") {
       return;
     }
     handleDataChange(valueOne, valueTwo, valueThree);
-    setIsSubmitted(true);
+
+    setParentData((prevState) => ({
+      ...prevState,
+      submitted: true,
+    }));
+
+    console.log(dataOnParent);
   }
 
   function onEditButtonClick() {
-    setIsSubmitted(false);
+    setParentData((prevState) => ({
+      ...prevState,
+      submitted: false,
+    }));
     // setValueOne(dataOnCV[subValueOne]);
     // setValueTwo(dataOnCV[subValueTwo]);
     // setValueThree(dataOnCV[subValueThree]);

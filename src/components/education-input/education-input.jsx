@@ -12,6 +12,8 @@ export default function EducationInputs({
   handleEducationChange,
   educationDetailsData,
 
+  setEducationDetailsData,
+
   setIsSubmitted,
   isSubmitted,
 }) {
@@ -33,7 +35,7 @@ export default function EducationInputs({
             type="text"
             name={firstField}
             id={firstField}
-            value={!isSubmitted ? universityValue : ""}
+            value={!educationDetailsData.submitted ? universityValue : ""}
             onChange={(e) => {
               setUniversityValue(e.target.value);
             }}
@@ -47,7 +49,7 @@ export default function EducationInputs({
             type={secondField}
             name={secondField}
             id={secondField}
-            value={!isSubmitted ? degreeValue : ""}
+            value={!educationDetailsData.submitted ? degreeValue : ""}
             onChange={(e) => {
               setDegreeValue(e.target.value);
             }}
@@ -61,7 +63,7 @@ export default function EducationInputs({
             type="text"
             name={thirdField}
             id={thirdField}
-            value={!isSubmitted ? datesStudiedValue : ""}
+            value={!educationDetailsData.submitted ? datesStudiedValue : ""}
             onChange={(e) => {
               setDatesStudiedValue(e.target.value);
             }}
@@ -76,8 +78,9 @@ export default function EducationInputs({
         valueThree={datesStudiedValue}
         setValueThree={setDatesStudiedValue}
         handleDataChange={handleEducationChange}
-        dataOnCV={educationDetailsData}
+        dataOnParent={educationDetailsData}
         setIsSubmitted={setIsSubmitted}
+        setParentData={setEducationDetailsData}
       />
     </div>
   );
