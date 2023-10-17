@@ -5,15 +5,11 @@ import "./sidebar.css";
 export default function Sidebar({
   handlePersonalChange,
   personalDetailsData,
-
   setPersonalDetailsData,
-  setEducationDetailsData,
 
+  setEducationDetailsData,
   handleEducationChange,
   educationDetailsData,
-
-  setIsSubmitted,
-  isSubmitted,
 }) {
   return (
     <>

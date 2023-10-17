@@ -1,8 +1,8 @@
 .sidebar {
-  width: 20%;
+  width: 600px;
   display: flex;
   flex-direction: column;
-  gap: 50px;
+  gap: 30px;
   align-items: center;
   justify-content: center;
 }
