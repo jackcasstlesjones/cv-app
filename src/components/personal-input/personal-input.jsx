@@ -72,17 +72,10 @@ export default function PersonalInputs({
       </form>
       <Buttons
         valueOne={nameValue}
-        setValueOne={setNameValue}
         valueTwo={emailValue}
-        setValueTwo={setEmailValue}
         valueThree={phoneValue}
-        setValueThree={setPhoneValue}
         handleDataChange={handlePersonalChange}
         dataOnParent={personalDetailsData}
-        setIsSubmitted={setIsSubmitted}
-        subValueOne={"fullName"}
-        subValueTwo={"email"}
-        subValueThree={"phone"}
         setParentData={setPersonalDetailsData}
       />
     </div>

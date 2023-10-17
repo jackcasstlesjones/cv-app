@@ -13,9 +13,6 @@ export default function EducationInputs({
   educationDetailsData,
 
   setEducationDetailsData,
-
-  setIsSubmitted,
-  isSubmitted,
 }) {
   const [universityValue, setUniversityValue] = useState("");
   const [degreeValue, setDegreeValue] = useState("");
@@ -72,14 +69,10 @@ export default function EducationInputs({
       </form>
       <Buttons
         valueOne={universityValue}
-        setValueOne={setUniversityValue}
         valueTwo={degreeValue}
-        setValueTwo={setDegreeValue}
         valueThree={datesStudiedValue}
-        setValueThree={setDatesStudiedValue}
         handleDataChange={handleEducationChange}
         dataOnParent={educationDetailsData}
-        setIsSubmitted={setIsSubmitted}
         setParentData={setEducationDetailsData}
       />
     </div>

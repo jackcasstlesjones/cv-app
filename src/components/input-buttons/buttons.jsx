@@ -2,17 +2,15 @@ import "./buttons.css";
 
 export default function Buttons({
   valueOne,
-  setValueOne,
+
   valueTwo,
-  setValueTwo,
+
   valueThree,
-  setValueThree,
+
   handleDataChange,
+
   dataOnParent,
-  setIsSubmitted,
-  subValueOne,
-  subValueTwo,
-  subValueThree,
+
   setParentData,
 }) {
   function onSubmitButtonClick() {
